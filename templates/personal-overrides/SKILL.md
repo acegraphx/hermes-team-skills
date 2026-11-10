@@ -40,6 +40,7 @@ This file is user-owned. It lives in this profile's skills directory (for exampl
 
 ### company-brain
 - Brain clone path: <for example ~/company-brain>
+- Personal wiki path: <for example ~/wiki>
 - Git identity: Hermes (<Full Name>)
 
 ### anti-slop-writing
