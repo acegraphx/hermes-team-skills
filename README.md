@@ -10,8 +10,6 @@ Skill je textový návod v souboru `SKILL.md`. Hermes má v rejstříku jen krá
 skills/                         8 týmových skills (tuhle složku čte Hermes)
 templates/personal-overrides/   šablona osobní skill (Hermes ji nečte, agent si ji zkopíruje)
 docs/sdileni-skills-v-tymu.md   sdílení skills v týmu, podrobně a se zdroji
-PREDANI.md                      jednostránkový průvodce předáním
-SLIDE-SUMMARY.md                shrnutí pro slidy
 CHANGELOG.md                    změny podle verzí
 LICENSE                         licence MIT
 ```
@@ -56,10 +54,12 @@ Doporučená cesta: týmový repozitář naklonujete na disk, v nastavení Herme
 
 Celou instalaci zvládne agent sám podle promptu v další sekci. Ručně vypadá takto (příkazy fungují v bashi i v PowerShellu). Klonujte ve stejném prostředí, ve kterém běží Hermes; když běží ve WSL, tak ve WSL.
 
+Předpoklady: Git, GitHub CLI přihlášené k vašemu účtu a přijatá pozvánka do repozitáře (je soukromý). GitHub CLI na Windows nainstalujete příkazem `winget install GitHub.cli`, Git příkazem `winget install Git.Git`. Přihlášení: `gh auth login`; na otázku, jestli přihlásit i Git, odpovězte ano.
+
 1. Naklonujte repozitář do domovské složky:
    ```bash
    cd ~
-   git clone https://github.com/acegraphx/hermes-team-skills hermes-team-skills
+   gh repo clone acegraphx/hermes-team-skills hermes-team-skills
    ```
 2. Přidejte složku se skills do nastavení Hermese a výsledek zkontrolujte:
    ```bash
@@ -94,7 +94,7 @@ Zkopírujte celý blok do svého Hermese:
 ```text
 Nainstaluj si týmový balíček Hermes skills a osvoj si ho. Postupuj po krocích a žádný nevynechej.
 
-1. Naklonuj https://github.com/acegraphx/hermes-team-skills do složky hermes-team-skills v mém domovském adresáři. Pokud složka už existuje, jen přes git status ověř, že je na větvi main a bez lokálních změn.
+1. Ověř přístup ke GitHubu: gh auth status a gh repo view acegraphx/hermes-team-skills. Když některý selže, zastav se a řekni mi, ať se přihlásím příkazem gh auth login a přijmu pozvánku do repozitáře. Pak v mém domovském adresáři spusť gh repo clone acegraphx/hermes-team-skills hermes-team-skills. Pokud složka už existuje, jen přes git status ověř, že je na větvi main a bez lokálních změn.
 2. Nastav skills.external_dirs tak, aby obsahoval ~/hermes-team-skills/skills. Cesty, které tam už jsou, zachovej. Ověř to přes hermes config get skills.external_dirs.
 3. Přes hermes skills list ověř, že vidíš všech 8 skills: reliable-software-delivery, evidence-based-reporting, company-brain, anti-slop-writing, reliable-web-research, independent-code-review, skill-authoring, delegation-and-model-routing.
 4. Každou z nich zamkni příkazem hermes curator lock <název> a zámky ověř v hermes curator status.
