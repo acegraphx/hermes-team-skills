@@ -2,6 +2,10 @@
 
 Každá verze uvádí změněné skills a nové skills, které je potřeba zamknout (`hermes curator lock <název>`).
 
+## 1.1.1 – 2026-11-10
+
+- Repozitář je veřejný: klonování přes `git clone` bez přihlášení ke GitHubu a bez pozvánky.
+
 ## 1.1.0 – 2026-11-10
 
 - company-brain 1.1.0: tři vrstvy znalostí (paměť, osobní wiki, firemní mozek), rozlišení „zapiš si“ a „zapiš do mozku“, postup hromadného onboardingu mozku po oblastech s nízkou důvěrou.
